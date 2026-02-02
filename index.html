@@ -9,13 +9,9 @@
 <body>
   <h1>Gizmo the Pet</h1>
 
-  <div id="pet-container" class="neutral">
-    <div id="pet-wrapper">
-      <img id="pet" src="images/neutral.png" alt="Gizmo the Pet">
-      <div class="tail"></div> <!-- Optional tail wag -->
-    </div>
-
-    <div id="stats">
+  <div id="game-container">
+    <!-- Stats sidebar -->
+    <div id="stats-sidebar">
       <div class="stat">
         <label>Hunger</label>
         <div class="bar"><div id="hunger-bar"></div></div>
@@ -30,12 +26,40 @@
       </div>
     </div>
 
-    <div id="controls">
-      <button onclick="feedPet()">Feed</button>
-      <button onclick="playPet()">Play</button>
-      <button onclick="sleepPet()">Sleep</button>
+    <!-- Pet area -->
+    <div id="pet-area">
+      <div id="message"></div>
+
+      <!-- Background -->
+      <div id="background"></div>
+
+      <!-- Pet wrapper -->
+      <div id="pet-wrapper">
+        <img id="pet" src="images/neutral.png" alt="Gizmo the Pet">
+        <div class="tail"></div>
+        <img id="accessory" src="" class="hidden" alt="">
+      </div>
+
+      <!-- Level / XP bar -->
+      <div id="level-container">
+        <span id="level">Level 1</span>
+        <div class="bar"><div id="xp-bar"></div></div>
+      </div>
+
+      <!-- Controls -->
+      <div id="controls">
+        <button onclick="feedPet()">Feed</button>
+        <button onclick="playPet()">Play</button>
+        <button onclick="sleepPet()">Sleep</button>
+      </div>
     </div>
   </div>
+
+  <!-- Sounds -->
+  <audio id="feed-sound" src="sounds/feed.mp3"></audio>
+  <audio id="play-sound" src="sounds/play.mp3"></audio>
+  <audio id="sleep-sound" src="sounds/sleep.mp3"></audio>
+  <audio id="sneeze-sound" src="sounds/sneeze.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
