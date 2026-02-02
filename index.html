@@ -8,19 +8,35 @@
 </head>
 <body>
   <h1>Gizmo the Pet</h1>
-  <div id="pet-container">
-    <img id="pet" src="https://i.imgur.com/3XvRZbR.png" alt="Gizmo the Pet">
-    <div id="stats">
-      <p>Hunger: <span id="hunger">50</span></p>
-      <p>Happiness: <span id="happiness">50</span></p>
-      <p>Energy: <span id="energy">50</span></p>
+
+  <div id="pet-container" class="neutral">
+    <div id="pet-wrapper">
+      <img id="pet" src="images/neutral.png" alt="Gizmo the Pet">
+      <div class="tail"></div> <!-- Optional tail wag -->
     </div>
+
+    <div id="stats">
+      <div class="stat">
+        <label>Hunger</label>
+        <div class="bar"><div id="hunger-bar"></div></div>
+      </div>
+      <div class="stat">
+        <label>Happiness</label>
+        <div class="bar"><div id="happiness-bar"></div></div>
+      </div>
+      <div class="stat">
+        <label>Energy</label>
+        <div class="bar"><div id="energy-bar"></div></div>
+      </div>
+    </div>
+
     <div id="controls">
       <button onclick="feedPet()">Feed</button>
       <button onclick="playPet()">Play</button>
       <button onclick="sleepPet()">Sleep</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
